@@ -23,16 +23,20 @@ struct RoundRectPagerOption: PageMenuOptions {
         return .white
     }
 
-    var menuTitleSelectedColor: UIColor {
-        return Theme.mainColor
-    }
+    var menuTitleSelectedColor: UIColor = Theme.mainColor
+  
+    var menuCursorSelectedColor: UIColor = .white
 
     var menuCursor: PageMenuCursor {
-        return .roundRect(rectColor: .white, cornerRadius: 10, height: 22, borderWidth: nil, borderColor: nil)
+        return .roundRect(rectColor: menuCursorSelectedColor, cornerRadius: 10, height: 22, borderWidth: nil, borderColor: nil)
     }
 
     var font: UIFont {
         return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+    }
+  
+    var selectedFont: UIFont {
+      return UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)
     }
 
     var menuItemMargin: CGFloat {

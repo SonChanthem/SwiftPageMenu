@@ -21,6 +21,15 @@ class UnderlineCursorView: UIView, TabMenuItemCursor {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+  
+    var color: UIColor {
+      get {
+        return backgroundColor ?? .white
+      }
+      set {
+        backgroundColor = newValue
+      }
+    }
 
     func setup(parent: UIView, isInfinite: Bool, options: PageMenuOptions) {
         self.translatesAutoresizingMaskIntoConstraints = false

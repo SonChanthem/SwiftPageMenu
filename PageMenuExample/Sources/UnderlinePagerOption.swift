@@ -21,16 +21,20 @@ struct UnderlinePagerOption: PageMenuOptions {
         return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1.0)
     }
     
-    var menuTitleSelectedColor: UIColor {
-        return Theme.mainColor
-    }
+    var menuTitleSelectedColor: UIColor = Theme.mainColor
+  
+    var menuCursorSelectedColor: UIColor = Theme.mainColor
     
     var menuCursor: PageMenuCursor {
-        return .underline(barColor: Theme.mainColor, height: 2)
+      return .underline(barColor: menuCursorSelectedColor, height: 2, cornerRadius: 0)
     }
 
     var font: UIFont {
         return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+    }
+  
+    var selectedFont: UIFont {
+      return UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)
     }
     
     var menuItemMargin: CGFloat {

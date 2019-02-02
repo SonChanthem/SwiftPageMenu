@@ -24,6 +24,15 @@ class RoundRectCursorView: UIView, TabMenuItemCursor {
         fatalError("init(coder:) has not been implemented")
     }
 
+    var color: UIColor {
+      get {
+        return backgroundColor ?? .white
+      }
+      set {
+        backgroundColor = newValue
+      }
+    }
+  
     func setup(parent: UIView, isInfinite: Bool, options: PageMenuOptions) {
         self.translatesAutoresizingMaskIntoConstraints = false
 

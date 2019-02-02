@@ -34,7 +34,7 @@ public extension PageMenuItemSize {
 
 public enum PageMenuCursor {
 
-    case underline(barColor: UIColor, height: CGFloat)
+    case underline(barColor: UIColor, height: CGFloat, cornerRadius: CGFloat)
 
     case roundRect(rectColor: UIColor, cornerRadius: CGFloat, height: CGFloat, borderWidth: CGFloat?, borderColor: UIColor?)
 }
@@ -43,7 +43,7 @@ extension PageMenuCursor {
 
     var height: CGFloat {
         switch self {
-        case let .underline(_, height):
+        case let .underline(_, height, _):
             return height
         case let .roundRect(_, _, height, _, _):
             return height
@@ -77,6 +77,8 @@ public protocol PageMenuOptions {
     var isInfinite: Bool { get }
 
     var font: UIFont { get }
+  
+    var selectedFont: UIFont { get }
 
     var menuItemSize: PageMenuItemSize { get }
 
@@ -84,7 +86,9 @@ public protocol PageMenuOptions {
 
     var menuTitleColor: UIColor { get }
 
-    var menuTitleSelectedColor: UIColor { get }
+    var menuTitleSelectedColor: UIColor { get set }
+  
+    var menuCursorSelectedColor: UIColor { get set }
 
     var menuCursor: PageMenuCursor { get }
 
@@ -130,16 +134,20 @@ public struct DefaultPageMenuOption: PageMenuOptions {
         return UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
     }
 
-    public var menuTitleSelectedColor: UIColor {
-        return .white
-    }
+    public var menuTitleSelectedColor: UIColor = .white
+  
+    public var menuCursorSelectedColor: UIColor = UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
 
     public var menuCursor: PageMenuCursor {
-        return .roundRect(rectColor: UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1), cornerRadius: 10, height: 22, borderWidth: nil, borderColor: nil)
+        return .roundRect(rectColor: menuCursorSelectedColor, cornerRadius: 10, height: 22, borderWidth: nil, borderColor: nil)
     }
 
     public var font: UIFont {
         return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+    }
+  
+    public var selectedFont: UIFont {
+      return UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)
     }
 
     public var tabMenuBackgroundColor: UIColor {

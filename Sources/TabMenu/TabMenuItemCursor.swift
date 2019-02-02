@@ -11,6 +11,8 @@ import Foundation
 protocol TabMenuItemCursor: class {
 
     var isHidden: Bool { get set }
+  
+    var color: UIColor { get set }
 
     func setup(parent: UIView, isInfinite: Bool, options: PageMenuOptions)
 

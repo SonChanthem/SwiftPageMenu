@@ -17,6 +17,8 @@ import Foundation
 
     /// The page view controller scroll progress between pages.
     @objc optional func pageMenuController(_ pageMenuController: PageMenuController,
+                                           fromIndex currentIndex: Int,
+                                           toIndex nextIndex: Int,
                                            scrollingProgress progress: CGFloat,
                                            direction: PageMenuNavigationDirection)
 

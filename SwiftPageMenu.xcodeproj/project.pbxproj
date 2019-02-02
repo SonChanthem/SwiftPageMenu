@@ -29,13 +29,13 @@
 		23C1D1E51E73054600A4A491 /* SwiftPageMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftPageMenu.h; sourceTree = "<group>"; };
 		23C1D1E61E73054600A4A491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C1D1EF1E73059500A4A491 /* PageMenuOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuOptions.swift; sourceTree = "<group>"; };
-		23C1D1F01E73059500A4A491 /* PageMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuController.swift; sourceTree = "<group>"; };
+		23C1D1F01E73059500A4A491 /* PageMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PageMenuController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		23C1D1F11E73059500A4A491 /* PageMenuControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuControllerDataSource.swift; sourceTree = "<group>"; };
 		23C1D1F21E73059500A4A491 /* PageMenuControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuControllerDelegate.swift; sourceTree = "<group>"; };
 		23C1D1F41E73059500A4A491 /* RoundRectCursorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectCursorView.swift; sourceTree = "<group>"; };
-		23C1D1F51E73059500A4A491 /* TabMenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuItemCell.swift; sourceTree = "<group>"; };
+		23C1D1F51E73059500A4A491 /* TabMenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = TabMenuItemCell.swift; sourceTree = "<group>"; tabWidth = 4; };
 		23C1D1F61E73059500A4A491 /* TabMenuItemCursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuItemCursor.swift; sourceTree = "<group>"; };
-		23C1D1F71E73059500A4A491 /* TabMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
+		23C1D1F71E73059500A4A491 /* TabMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		23C1D1F81E73059500A4A491 /* UnderlineCursorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderlineCursorView.swift; sourceTree = "<group>"; };
 		23C1D1FA1E73059500A4A491 /* EMPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMPageViewController.swift; sourceTree = "<group>"; };
 		23C1D1FB1E73059500A4A491 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
