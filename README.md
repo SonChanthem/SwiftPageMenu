@@ -2,7 +2,7 @@ SwiftPageMenu
 ===================================
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/hsylife/SwiftyPickerPopover)
-
+[![CocoaPods](https://img.shields.io/cocoapods/dt/SwiftPageMenu.svg)](https://cocoapods.org/pods/SwiftPageMenu)
 
 ![1](https://raw.githubusercontent.com/tamanyan/SwiftPageMenu/master/screen_captures/1.gif)
 ![2](https://raw.githubusercontent.com/tamanyan/SwiftPageMenu/master/screen_captures/2.gif)
@@ -58,6 +58,8 @@ SwiftPageMenu give you the events below code.
 
     /// The page view controller scroll progress between pages.
     @objc optional func pageMenuController(_ pageMenuController: PageMenuController,
+                                           fromIndex currentIndex: Int,
+                                           toIndex nextIndex: Int,
                                            scrollingProgress progress: CGFloat,
                                            direction: PageMenuNavigationDirection)
 
@@ -94,16 +96,20 @@ struct RoundRectPagerOption: PageMenuOptions {
         return .white
     }
 
-    var menuTitleSelectedColor: UIColor {
-        return UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
-    }
+    var menuTitleSelectedColor: UIColor = Theme.mainColor
+
+    var menuCursorSelectedColor: UIColor = .white
 
     var menuCursor: PageMenuCursor {
-        return .roundRect(rectColor: .white, cornerRadius: 10, height: 22)
+      return .roundRect(rectColor: menuCursorSelectedColor, cornerRadius: 10, height: 22, borderWidth: nil, borderColor: nil)
     }
 
     var font: UIFont {
         return .systemFont(ofSize: UIFont.systemFontSize)
+    }
+    
+    var selectedFont: UIFont {
+      return UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)
     }
 
     var menuItemMargin: CGFloat {
@@ -124,6 +130,14 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 }
 ```
+
+### CocoaPods
+
+To integrate SwiftPageMenu into your Xcode project using CocoaPods, specify it in your Podfile:
+
+```ruby
+pod "SwiftPageMenu"
+```````
 
 ### Carthage
 
