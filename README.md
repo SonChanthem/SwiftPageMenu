@@ -130,6 +130,17 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 }
 ```
+It can change menuTitleSelectedColor and  menuCursorSelectedColor while you srolling to next or previous page. You can adding like this:
+
+```swift
+func pageMenuController(_ pageMenuController: PageMenuController, fromIndex currentIndex: Int, toIndex nextIndex: Int, scrollingProgress progress: CGFloat, direction: PageMenuNavigationDirection) {
+  var index: Int
+  if progress > 0.5 || progress < -0.5 {
+    options.menuTitleSelectedColor = UIColor.red
+    options.menuCursorSelectedColor = UIColor.black
+  }
+}
+```
 
 ### CocoaPods
 
