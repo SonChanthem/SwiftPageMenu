@@ -147,7 +147,7 @@ func pageMenuController(_ pageMenuController: PageMenuController, fromIndex curr
 To integrate SwiftPageMenu into your Xcode project using CocoaPods, specify it in your Podfile:
 
 ```ruby
-pod "SwiftPageMenu"
+pod 'SwiftPageMenu'
 ```````
 
 ### Carthage
