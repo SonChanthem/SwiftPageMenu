@@ -57,12 +57,25 @@ class PageTabMenuViewController: PageMenuController {
     }
   
     private func setupRightNavigationItem() {
-      let buttonItem = UIBarButtonItem(title: "Move3", style: .plain, target: self, action: #selector(moveToItem3))
-      navigationItem.rightBarButtonItem = buttonItem
+      let moveButtonItem = UIBarButtonItem(title: "Move3", style: .plain, target: self, action: #selector(moveToItem3))
+      
+      let nextButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(moveToNextPage))
+      navigationItem.rightBarButtonItems = [nextButtonItem, moveButtonItem]
+      
+      let previousButtonItem = UIBarButtonItem(title: "Previous", style: .plain, target: self, action: #selector(moveToPreviousPage))
+      navigationItem.leftBarButtonItem = previousButtonItem
     }
   
     @objc private func moveToItem3() {
       moveToIndex(3)
+    }
+  
+    @objc private func moveToPreviousPage() {
+      scrollToPrevious(animated: true, completion: nil)
+    }
+  
+    @objc private func moveToNextPage() {
+      scrollToNext(animated: true, completion: nil)
     }
 }
 

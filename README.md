@@ -141,6 +141,13 @@ func pageMenuController(_ pageMenuController: PageMenuController, fromIndex curr
   }
 }
 ```
+##### How to change the visible child view controller programmatically
+SwiftPageMenu provides the following methods to programmatically change the visible child view controller:
+```swift
+public func moveToIndex(_ index: Int)
+public func scrollToNext(animated: Bool, completion: ((Bool) -> Void)?)
+public func scrollToPrevious(animated: Bool, completion: ((Bool) -> Void)?)
+```
 
 ### CocoaPods
 
