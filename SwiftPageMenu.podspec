@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SwiftPageMenu"
-  spec.version      = "1.3.2"
+  spec.version      = "1.3.3"
   spec.summary      = "Customizable Page Tab Menu Controller with option infinite scroll. 👍"
   spec.description  = <<-DESC
 "Customizable Page Tab Menu Controller with option infinite scroll. 👍"
