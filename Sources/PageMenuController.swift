@@ -142,6 +142,14 @@ open class PageMenuController: UIViewController {
     }
     
     /**
+     Move to specific page
+     - parameter index: Specific index what to move
+    */
+    public func moveToIndex(_ index: Int) {
+        tabView.moveToIndex(index)
+    }
+    
+    /**
      Transitions to the next page.
      
      - parameter animated: A Boolean whether or not to animate the transition

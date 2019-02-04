@@ -281,6 +281,14 @@ extension TabMenuView {
     }
     
     /**
+     Call when you want to move to specific index
+     - parameter index: Specific Index
+    */
+    func moveToIndex(_ index: Int) {
+        collectionView(collectionView, didSelectItemAt: IndexPath(item: index, section: 0))
+    }
+    
+    /**
      Make the tapped cell the current if isInfinite is true
      
      - parameter index: Next IndexPath√

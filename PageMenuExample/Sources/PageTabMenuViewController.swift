@@ -52,6 +52,17 @@ class PageTabMenuViewController: PageMenuController {
 
         self.delegate = self
         self.dataSource = self
+      
+        setupRightNavigationItem()
+    }
+  
+    private func setupRightNavigationItem() {
+      let buttonItem = UIBarButtonItem(title: "Move3", style: .plain, target: self, action: #selector(moveToItem3))
+      navigationItem.rightBarButtonItem = buttonItem
+    }
+  
+    @objc private func moveToItem3() {
+      moveToIndex(3)
     }
 }
 
